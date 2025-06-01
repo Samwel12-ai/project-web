@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-header h1 {
+    color: blue;
+    font-size: 2rem;
+}
+
+.main-content {
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 1px solid gainsboro;
+    padding: 2rem;
+}
+
+.top-bar {
+    margin-bottom: 2rem;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    border: 1px solid gainsboro;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.stat-card h3 {
+    color: black;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: blue;
+}
+
+.table-container {
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 1px solid gainsboro;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid gainsboro;
+}
+
+th {
+    background-color: white;
+    font-weight: 600;
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.room-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid gainsboro;
+}
+
+.room-card.available {
+    border-left: 4px solid green;
+}
+
+.room-card.occupied {
+    border-left: 4px solid red;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    border: 1px solid gainsboro;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+input, select {
+    padding: 0.75rem;
+    border: 1px solid gainsboro;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.action-btn, .submit-btn {
+    background-color: blue;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover, .submit-btn:hover {
+    background-color: blue;
+}
+
+.alert {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    border: 1px solid gainsboro;
+    display: none;
+}
+
+.alert.success {
+    background-color: green;
+    color: white;
+}
+
+.alert.error {
+    background-color: red;
+    color: white;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+}

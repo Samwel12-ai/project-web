@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="index (1).css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>Hospital Management System</h1>
+        </header>
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search patients...">
+                </div>
+            </header>
+
+            <section id="patients" class="content-section active">
+                <h2>Patients Management</h2>
+                <button id="addPatientBtn" class="action-btn">Add New Patient</button>
+                <div class="table-container">
+                    <table id="patientsTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Gender</th>
+                                <th>Birth Date</th>
+                                <th>Phone</th>
+                                <th>Room</th>
+                                <th>ICU Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="patientModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Patient Details</h2>
+            <form id="patientForm">
+                <input type="text" id="patientName" placeholder="Patient Name" required>
+                <select id="patientGender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <input type="date" id="patientBirthDate" required>
+                <input type="tel" id="patientPhone" placeholder="Phone Number" required>
+                <input type="number" id="patientRoom" placeholder="Room Number">
+                <label>
+                    <input type="checkbox" id="patientICU">
+                    ICU Required
+                </label>
+                <button type="submit" class="submit-btn">Save Patient</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="alert" class="alert"></div>
+    <script src="script (1).js"></script>
+</body>
+</html>
